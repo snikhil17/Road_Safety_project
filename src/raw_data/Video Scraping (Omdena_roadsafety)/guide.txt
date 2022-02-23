@@ -1,0 +1,14 @@
+several gbs of YouTube roadcam videos, now labeled with semi supervised learning
+
+To extract vids:
+navigate to-->
+omdena_india_scraping-->selenium-->youtube_scraping
+
+change SAVE_PATH to your prefered location 
+
+
+To get labels:
+navigate to-->
+labeling data--> labels.json
+
+labels are in the json file
