@@ -1,84 +1,48 @@
-# omdena-india-roadsafety
+# Deploying App on Cloud
 
-AI for Road Safety in India
+We have deployed the app on cloud using Streamlit & Docker successfully.
 
--   Gooogle Drive link https://drive.google.com/drive/folders/1cGs5Inm8AaTxmG9Ad6-lX6X_5CWBq7Zx?usp=sharing
--   Final Presentation Link : https://docs.google.com/presentation/d/1Gk53mIN270ovEqfSlX6FUAC4_ynEWU3hHXVGxUJZtRg/edit?usp=sharing
--   Streamlit NLP Application Demo Link : https://share.streamlit.io/prathimacode-hub/ai-for-road-safety/main/main.py
--   CV Driver Attention Estimation = Eye Gaze Estimation + Drowsiness Detection + Yawn Detection
 
-This application doesn't support Streamlit, hence it can compiled directly on Local Drive using generated [Driver Attention Estimation .exe file](https://drive.google.com/drive/folders/1cGs5Inm8AaTxmG9Ad6-lX6X_5CWBq7Zx) files uploaded in the drive.
+# Streamlit Application:
 
-## Contribution Guidelines
-- Have a Look at the [project structure](#project-structure) and [folder overview](#folder-overview) below to understand where to store/upload your contribution
-- If you're creating a task, Go to the task folder and create a new folder with the below naming convention and add a README.md with task details and goals to help other contributors understand
-    - Task Folder Naming Convention : _task-n-taskname.(n is the task number)_  ex: task-1-data-analysis, task-2-model-deployment etc.
-    - Create a README.md with a table containing information table about all contributions for the task.
-- If you're contributing for a task, please make sure to store in relavant location and update the README.md information table with your contribution details.
-- Make sure your File names(jupyter notebooks, python files, data sheet file names etc) has proper naming to help others in easily identifing them.
-- Please restrict yourself from creating unnessesary folders other than in 'tasks' folder (as above mentioned naming convention) to avoid confusion. 
+## Note: 
+- **Sign Up** in [Streamlit](https://share.streamlit.io/) using your personal credentials
+- Link your project github repository to visualize your application on Streamlit
 
-## Project Structure
+Demo Link : https://share.streamlit.io/prathimacode-hub/ai-for-road-safety/main/main.py
 
-    ├── LICENSE
-    ├── README.md          <- The top-level README for developers/collaborators using this project.
-    ├── original           <- Original Source Code of the challenge hosted by omdena. Can be used as a reference code for the current project goal.
-    │ 
-    │
-    ├── reports            <- Folder containing the final reports/results of this project
-    │   └── README.md      <- Details about final reports and analysis
-    │ 
-    │   
-    ├── src                <- Source code folder for this project
-        │
-        ├── data           <- Datasets used and collected for this project
-        │   
-        ├── docs           <- Folder for Task documentations, Meeting Presentations and task Workflow Documents and Diagrams.
-        │
-        ├── references     <- Data dictionaries, manuals, and all other explanatory references used 
-        │
-        ├── tasks          <- Master folder for all individual task folders
-        │
-        ├── visualizations <- Code and Visualization dashboards generated for the project
-        │
-        └── results        <- Folder to store Final analysis and modelling results and code.
---------
 
-## Folder Overview
+# Docker Steps:
 
-- Original          - Folder Containing old/completed Omdena challenge code.
-- Reports           - Folder to store all Final Reports of this project
-- Data              - Folder to Store all the data collected and used for this project 
-- Docs              - Folder for Task documentations, Meeting Presentations and task Workflow Documents and Diagrams.
-- References        - Folder to store any referneced code/research papers and other useful documents used for this project
-- Tasks             - Master folder for all tasks
-  - All Task Folder names should follow specific naming convention
-  - All Task folder names should be in chronologial order (from 1 to n)
-  - All Task folders should have a README.md file with task Details and task goals along with an info table containing all code/notebook files with their links and information
-  - Update the [task-table](./src/tasks/README.md#task-table) whenever a task is created and explain the purpose and goals of the task to others.
-- Visualization     - Folder to store dashboards, analysis and visualization reports
-- Results           - Folder to store final analysis modelling results for the project.
+## Note: 
+- **snikhil17** : login ID of Dockerhub (use own when deploying)
+- **omdena_road_safety**: name of the image created (you may use something else)
 
-## Project Setup 
+## To Push the image and run in your PC
+## Create the image
+- **docker build -t snikhil17/omdena_road_safety .**
+## Run the image in  local PC
+- **docker run -it -p 8501:8501 snikhil17/omdena_road_safety**
+- **To run streamlit: once docker image is run. Open a new browser and run http://localhost:8501/**
 
-Open the Command line or Terminal
+## To Push image in docker-hub
+- **docker login**
+- **docker push snikhil17/omdena_road_safety** 
 
-- Clone the repository
+## To  pull the image and run in your PC
+- **docker pull snikhil17/customer_intention_1:latest**
+- **docker run -it -p 8501:8501  snikhil17/omdena_road_safety**
+- To run streamlit: once docker image is run. Open a new browser and run **http://localhost:8501/**
 
-```
-git clone https://github.com/OmdenaAI/omdena-india-roadsafety.git
-```
-- Move to the folder
 
-```
-cd omdena-india-roadsafety
-```
-- To open with VSCode
-```
-code .
-```
-- To open with jupyter notebook (or maually open using jupyter notebook app)
-```
-jupyter notebook
-```
+# Tasks Involved:
 
+## Natural Language Processing
+
+Label & Sentiment Generator - Check out this application through Streamlit Demo App Link provided.
+
+## Computer Vision
+
+Eye Gaze Estimation + Drowsiness Detection + Yawn Detection
+
+This application doesn't support Streamlit, hence it can compiled directly on Local System using generated [driver_distraction_eyegaze_drowsiness_yawn.exe](https://drive.google.com/file/d/18GMcLeY4d0U1LTraKtCRMNTv4yho91al/view) file in the drive.
